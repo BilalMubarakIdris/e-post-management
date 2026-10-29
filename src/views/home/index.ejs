@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Web-Based E-Post Management System</title>
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-envelope-open-text text-2xl text-blue-900 mr-2"></i>
+                        <span class="text-xl font-bold text-blue-900">E-Post MS</span>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home" class="text-gray-700 hover:text-blue-900 px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="#features" class="text-gray-700 hover:text-blue-900 px-3 py-2 text-sm font-medium">Features</a>
+                        <a href="#how-it-works" class="text-gray-700 hover:text-blue-900 px-3 py-2 text-sm font-medium">How It Works</a>
+                        <a href="#roles" class="text-gray-700 hover:text-blue-900 px-3 py-2 text-sm font-medium">Roles</a>
+                        <a href="#benefits" class="text-gray-700 hover:text-blue-900 px-3 py-2 text-sm font-medium">Benefits</a>
+                        <a href="/auth/login" class="bg-blue-900 text-white px-6 py-2 rounded-lg hover:bg-blue-800 text-sm font-medium transition">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-16 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        Web-Based <span class="text-blue-200">E-Post</span> Management System
+                    </h1>
+                    <p class="text-xl text-blue-100 mb-8 leading-relaxed">
+                        A modern, secure, and efficient solution for managing organizational correspondence. Streamline registration, routing, tracking, and reporting of all incoming and outgoing mail digitally.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="/auth/login" class="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition text-center shadow-lg">
+                            <i class="fas fa-sign-in-alt mr-2"></i> Access System
+                        </a>
+                        <a href="#how-it-works" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition text-center">
+                            <i class="fas fa-play-circle mr-2"></i> See How It Works
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden lg:block">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-4 bg-white/10 p-4 rounded-lg">
+                                <div class="bg-green-500 rounded-full p-2">
+                                    <i class="fas fa-inbox text-white"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="h-2 bg-white/30 rounded w-3/4 mb-2"></div>
+                                    <div class="h-2 bg-white/20 rounded w-1/2"></div>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4 bg-white/10 p-4 rounded-lg">
+                                <div class="bg-blue-500 rounded-full p-2">
+                                    <i class="fas fa-route text-white"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="h-2 bg-white/30 rounded w-2/3 mb-2"></div>
+                                    <div class="h-2 bg-white/20 rounded w-1/3"></div>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4 bg-white/10 p-4 rounded-lg">
+                                <div class="bg-purple-500 rounded-full p-2">
+                                    <i class="fas fa-check-circle text-white"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="h-2 bg-white/30 rounded w-4/5 mb-2"></div>
+                                    <div class="h-2 bg-white/20 rounded w-2/5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Powerful Features</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Everything you need to manage correspondence efficiently in one integrated platform</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group p-8 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-300">
+                    <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-900 transition-colors">
+                        <i class="fas fa-inbox text-2xl text-blue-900 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Incoming Correspondence</h3>
+                    <p class="text-gray-600 leading-relaxed">Register and track all incoming mail with sender details, reference numbers, priority levels, and electronic attachments.</p>
+                </div>
+                <div class="group p-8 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-green-200 transition-all duration-300">
+                    <div class="w-14 h-14 bg-green-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-green-700 transition-colors">
+                        <i class="fas fa-paper-plane text-2xl text-green-700 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Outgoing Correspondence</h3>
+                    <p class="text-gray-600 leading-relaxed">Create, manage and dispatch outgoing correspondence with recipient information, tracking numbers, and document management.</p>
+                </div>
+                <div class="group p-8 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-purple-200 transition-all duration-300">
+                    <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-purple-600 transition-colors">
+                        <i class="fas fa-share-alt text-2xl text-purple-600 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Assignment & Routing</h3>
+                    <p class="text-gray-600 leading-relaxed">Assign correspondence to users or departments, forward between units with remarks, and maintain complete routing history.</p>
+                </div>
+                <div class="group p-8 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-orange-200 transition-all duration-300">
+                    <div class="w-14 h-14 bg-orange-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-orange-600 transition-colors">
+                        <i class="fas fa-map-marker-alt text-2xl text-orange-600 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Real-time Tracking</h3>
+                    <p class="text-gray-600 leading-relaxed">Monitor correspondence movement across departments with detailed tracking history showing every action and timestamp.</p>
+                </div>
+                <div class="group p-8 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-red-200 transition-all duration-300">
+                    <div class="w-14 h-14 bg-red-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-red-600 transition-colors">
+                        <i class="fas fa-bell text-2xl text-red-600 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Smart Notifications</h3>
+                    <p class="text-gray-600 leading-relaxed">Automatic alerts for assignments, forwards, and updates ensure no correspondence goes unnoticed or delayed.</p>
+                </div>
+                <div class="group p-8 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-indigo-200 transition-all duration-300">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-indigo-600 transition-colors">
+                        <i class="fas fa-file-alt text-2xl text-indigo-600 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Reports & Analytics</h3>
+                    <p class="text-gray-600 leading-relaxed">Generate comprehensive reports by type, status, department, and date range for informed management decisions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">A streamlined workflow from registration to completion</p>
+            </div>
+            <div class="relative">
+                <div class="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-blue-200 transform -translate-y-1/2"></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+                    <div class="text-center">
+                        <div class="relative inline-block mb-6">
+                            <div class="w-20 h-20 bg-blue-900 text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg">01</div>
+                            <div class="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow">
+                                <i class="fas fa-edit text-blue-900"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Register</h3>
+                        <p class="text-gray-600">Registry Officer captures incoming/outgoing correspondence with all details, sender/recipient info, and uploads supporting documents.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="relative inline-block mb-6">
+                            <div class="w-20 h-20 bg-blue-900 text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg">02</div>
+                            <div class="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow">
+                                <i class="fas fa-user-plus text-blue-900"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Assign</h3>
+                        <p class="text-gray-600">Correspondence is assigned to the appropriate department or officer based on subject matter and organizational structure.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="relative inline-block mb-6">
+                            <div class="w-20 h-20 bg-blue-900 text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg">03</div>
+                            <div class="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow">
+                                <i class="fas fa-cogs text-blue-900"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Process</h3>
+                        <p class="text-gray-600">Responsible officer reviews, takes action, updates status, adds remarks, and may forward to other departments if necessary.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="relative inline-block mb-6">
+                            <div class="w-20 h-20 bg-blue-900 text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg">04</div>
+                            <div class="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow">
+                                <i class="fas fa-check text-blue-900"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Track & Complete</h3>
+                        <p class="text-gray-600">Every action is logged in the tracking history. Management can monitor progress while the system maintains full accountability.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Roles Section -->
+    <section id="roles" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">User Roles & Access</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Secure role-based permissions tailored to each user's responsibilities</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gradient-to-br from-red-50 to-white p-6 rounded-xl border border-red-100 shadow-sm hover:shadow-lg transition">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mr-3">
+                            <i class="fas fa-crown text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900">Administrator</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-start"><i class="fas fa-check text-red-600 mt-1 mr-2"></i> User & Department Management</li>
+                        <li class="flex items-start"><i class="fas fa-check text-red-600 mt-1 mr-2"></i> Complete System Control</li>
+                        <li class="flex items-start"><i class="fas fa-check text-red-600 mt-1 mr-2"></i> Audit Logs Access</li>
+                        <li class="flex items-start"><i class="fas fa-check text-red-600 mt-1 mr-2"></i> All Reports</li>
+                    </ul>
+                </div>
+                <div class="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl border border-blue-100 shadow-sm hover:shadow-lg transition">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-3">
+                            <i class="fas fa-clipboard-check text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900">Registry Officer</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mt-1 mr-2"></i> Register Incoming/Outgoing</li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mt-1 mr-2"></i> Assign & Forward</li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mt-1 mr-2"></i> Document Management</li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mt-1 mr-2"></i> Generate Reports</li>
+                    </ul>
+                </div>
+                <div class="bg-gradient-to-br from-green-50 to-white p-6 rounded-xl border border-green-100 shadow-sm hover:shadow-lg transition">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mr-3">
+                            <i class="fas fa-user-cog text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900">Department Officer</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-start"><i class="fas fa-check text-green-600 mt-1 mr-2"></i> Process Assigned Items</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-600 mt-1 mr-2"></i> Update Status & Remarks</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-600 mt-1 mr-2"></i> Forward Correspondence</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-600 mt-1 mr-2"></i> View Department Mail</li>
+                    </ul>
+                </div>
+                <div class="bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl border border-purple-100 shadow-sm hover:shadow-lg transition">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-3">
+                            <i class="fas fa-chart-bar text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900">Management</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-start"><i class="fas fa-check text-purple-600 mt-1 mr-2"></i> Overview Dashboard</li>
+                        <li class="flex items-start"><i class="fas fa-check text-purple-600 mt-1 mr-2"></i> Monitor All Activities</li>
+                        <li class="flex items-start"><i class="fas fa-check text-purple-600 mt-1 mr-2"></i> Generate Reports</li>
+                        <li class="flex items-start"><i class="fas fa-check text-purple-600 mt-1 mr-2"></i> Strategic Oversight</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Key Benefits</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Transform your correspondence management process</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="flex items-start p-6 bg-white rounded-lg shadow-sm">
+                    <div class="flex-shrink-0">
+                        <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-leaf text-green-600"></i>
+                        </div>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Go Paperless</h3>
+                        <p class="text-gray-600 text-sm">Eliminate excessive paperwork and reduce physical storage requirements.</p>
+                    </div>
+                </div>
+                <div class="flex items-start p-6 bg-white rounded-lg shadow-sm">
+                    <div class="flex-shrink-0">
+                        <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-tachometer-alt text-blue-600"></i>
+                        </div>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Faster Processing</h3>
+                        <p class="text-gray-600 text-sm">Instant routing and notifications significantly reduce processing time.</p>
+                    </div>
+                </div>
+                <div class="flex items-start p-6 bg-white rounded-lg shadow-sm">
+                    <div class="flex-shrink-0">
+                        <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-shield-alt text-purple-600"></i>
+                        </div>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Enhanced Security</h3>
+                        <p class="text-gray-600 text-sm">Role-based access control protects sensitive correspondence and documents.</p>
+                    </div>
+                </div>
+                <div class="flex items-start p-6 bg-white rounded-lg shadow-sm">
+                    <div class="flex-shrink-0">
+                        <div class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-search-plus text-orange-600"></i>
+                        </div>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Easy Retrieval</h3>
+                        <p class="text-gray-600 text-sm">Find any correspondence instantly with advanced search and filtering.</p>
+                    </div>
+                </div>
+                <div class="flex items-start p-6 bg-white rounded-lg shadow-sm">
+                    <div class="flex-shrink-0">
+                        <div class="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-history text-red-600"></i>
+                        </div>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Complete Accountability</h3>
+                        <p class="text-gray-600 text-sm">Full audit trail tracks every action for transparency and accountability.</p>
+                    </div>
+                </div>
+                <div class="flex items-start p-6 bg-white rounded-lg shadow-sm">
+                    <div class="flex-shrink-0">
+                        <div class="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-chart-line text-indigo-600"></i>
+                        </div>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Data-Driven Insights</h3>
+                        <p class="text-gray-600 text-sm">Comprehensive reports help identify bottlenecks and improve efficiency.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20" style="background-color: #1e3a8a;">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 style="color: white; font-size: 2.25rem; font-weight: 700; margin-bottom: 1.5rem; line-height: 1.2;">Ready to Modernize Your Correspondence Management?</h2>
+            <p style="color: #e5e7eb; font-size: 1.25rem; margin-bottom: 2rem;">Join the digital transformation and experience efficient, secure, and organized correspondence handling.</p>
+            <a href="/auth/login" style="background-color: white; color: #1e3a8a; padding: 1rem 2.5rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; display: inline-block; font-size: 1.125rem;">
+                <i class="fas fa-rocket mr-2"></i> Get Started Today
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: #111827;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-envelope-open-text text-2xl mr-2" style="color: #60a5fa;"></i>
+                        <span class="text-xl font-bold" style="color: white;">E-Post Management System</span>
+                    </div>
+                    <p style="color: white; line-height: 1.6;">A comprehensive web-based solution for digital correspondence management in organizations.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4" style="color: white;">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#features" style="color: white; text-decoration: none;">Features</a></li>
+                        <li><a href="#how-it-works" style="color: white; text-decoration: none;">How It Works</a></li>
+                        <li><a href="#roles" style="color: white; text-decoration: none;">User Roles</a></li>
+                        <li><a href="/auth/login" style="color: white; text-decoration: none;">Login</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4" style="color: white;">System Features</h3>
+                    <ul class="space-y-2" style="color: white;">
+                        <li>• Incoming & Outgoing Management</li>
+                        <li>• Routing & Tracking</li>
+                        <li>• Notifications & Alerts</li>
+                        <li>• Reports & Analytics</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="border-top: 1px solid #374151; margin-top: 2rem; padding-top: 2rem; text-align: center;">
+                <p style="color: white;">© 2024 Web-Based E-Post Management System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

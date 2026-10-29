@@ -1,0 +1,53 @@
+QUICK START GUIDE - Web-Based E-Post Management System
+
+PREREQUISITES:
+1. Node.js (installed)
+2. MongoDB - Either:
+   a) Local MongoDB: Download from https://www.mongodb.com/try/download/community
+   b) MongoDB Atlas (free): https://www.mongodb.com/atlas
+
+SETUP STEPS:
+
+1. Open terminal in "Idris Project" folder
+2. Install dependencies (already done, but if needed): npm install
+3. Configure MongoDB:
+   - For local: Make sure MongoDB is running on localhost:27017
+   - For Atlas: Update .env file with your connection string
+4. Edit .env file if needed (copy from .env.example)
+5. Build CSS (already done): npm run build:css
+6. Create admin user: npm run seed:admin
+   Default login: username=admin, password=admin123
+7. Start the server:
+   - Development: npm run dev
+   - Production: npm start
+8. Open browser: http://localhost:3000
+
+LOGIN CREDENTIALS:
+Admin: admin / admin123 (after seeding)
+
+USER ROLES:
+- admin - Full access
+- registry_officer - Register/manage incoming/outgoing
+- department_officer - Process assigned correspondence
+- management - View reports
+
+FEATURES IMPLEMENTED:
+✓ User Authentication & Role-based Access
+✓ Incoming Correspondence Management
+✓ Outgoing Correspondence Management
+✓ Correspondence Assignment & Routing
+✓ Tracking & History
+✓ Notifications
+✓ Search & Reports
+✓ Document Uploads
+✓ Department & User Management
+✓ Audit Logs
+
+PROJECT STRUCTURE:
+- server.js - Entry point
+- src/app.js - Express app setup
+- src/models/ - Database models
+- src/routes/ - Routes
+- src/controllers/ - Business logic
+- src/views/ - EJS templates
+- src/public/ - Static files (CSS, uploads)

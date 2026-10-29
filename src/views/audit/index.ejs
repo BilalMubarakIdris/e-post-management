@@ -1,0 +1,37 @@
+<div class="mb-6">
+    <h1 class="text-3xl font-bold text-gray-800">Audit Logs</h1>
+    <p class="text-gray-600">System activity records</p>
+</div>
+
+<div class="bg-white rounded-lg shadow overflow-hidden">
+    <table class="min-w-full divide-y divide-gray-200">
+        <thead class="bg-gray-50">
+            <tr>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">User</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Action</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Details</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">IP Address</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+            </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200">
+            <% if (logs.length > 0) { %>
+                <% logs.forEach(log => { %>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            <%= log.user ? log.user.fullName : 'System' %> (<%= log.user ? log.user.username : 'N/A' %>)
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900"><%= log.action %></td>
+                        <td class="px-6 py-4 text-sm text-gray-900"><%= log.details || 'N/A' %></td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900"><%= log.ipAddress || 'N/A' %></td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"><%= log.createdAt.toLocaleString() %></td>
+                    </tr>
+                <% }) %>
+            <% } else { %>
+                <tr>
+                    <td colspan="5" class="px-6 py-4 text-center text-gray-500">No audit logs found</td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,89 @@
+<div class="mb-6">
+    <h1 class="text-3xl font-bold text-gray-800">Register Incoming Correspondence</h1>
+    <p class="text-gray-600">Add new incoming correspondence to the system</p>
+</div>
+
+<div class="bg-white rounded-lg shadow p-6">
+    <form action="/incoming/add" method="POST" enctype="multipart/form-data" class="space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Reference Number</label>
+                <input type="text" name="referenceNumber" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Date Received</label>
+                <input type="date" name="dateReceived" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+            </div>
+        </div>
+        
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Subject *</label>
+            <input type="text" name="subject" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+        </div>
+        
+        <div class="border-t pt-6">
+            <h3 class="text-lg font-semibold text-gray-800 mb-4">Sender Information</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Sender Name</label>
+                    <input type="text" name="senderName" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Organization</label>
+                    <input type="text" name="senderOrg" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                    <input type="email" name="senderEmail" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Phone</label>
+                    <input type="text" name="senderPhone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                </div>
+            </div>
+            <div class="mt-4">
+                <label class="block text-sm font-medium text-gray-700 mb-2">Address</label>
+                <textarea name="senderAddress" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"></textarea>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Department</label>
+                <select name="department" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                    <option value="">Select Department</option>
+                    <% departments.forEach(dept => { %>
+                        <option value="<%= dept._id %>"><%= dept.name %></option>
+                    <% }) %>
+                </select>
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Priority</label>
+                <select name="priority" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                    <option value="normal">Normal</option>
+                    <option value="low">Low</option>
+                    <option value="high">High</option>
+                    <option value="urgent">Urgent</option>
+                </select>
+            </div>
+        </div>
+        
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Description</label>
+            <textarea name="description" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"></textarea>
+        </div>
+        
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Attachments (Max 5 files)</label>
+            <input type="file" name="attachments" multiple class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+            <p class="text-xs text-gray-500 mt-1">Allowed: PDF, DOC, DOCX, JPG, PNG, TXT</p>
+        </div>
+        
+        <div class="flex space-x-4">
+            <button type="submit" class="bg-blue-900 text-white px-6 py-2 rounded hover:bg-blue-800">
+                <i class="fas fa-save mr-2"></i> Register
+            </button>
+            <a href="/incoming" class="bg-gray-500 text-white px-6 py-2 rounded hover:bg-gray-600">Cancel</a>
+        </div>
+    </form>
+</div>

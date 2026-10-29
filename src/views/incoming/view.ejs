@@ -1,0 +1,125 @@
+<div class="mb-6">
+    <h1 class="text-3xl font-bold text-gray-800">Correspondence Details</h1>
+    <p class="text-gray-600">Tracking No: <%= correspondence.trackingNumber %></p>
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <div class="lg:col-span-2 bg-white rounded-lg shadow p-6">
+        <h2 class="text-xl font-semibold text-gray-800 mb-4">Information</h2>
+        <div class="grid grid-cols-2 gap-4">
+            <div>
+                <p class="text-sm text-gray-600">Type</p>
+                <p class="font-medium"><%= correspondence.type %></p>
+            </div>
+            <div>
+                <p class="text-sm text-gray-600">Reference No</p>
+                <p class="font-medium"><%= correspondence.referenceNumber || 'N/A' %></p>
+            </div>
+            <div>
+                <p class="text-sm text-gray-600">Subject</p>
+                <p class="font-medium col-span-2"><%= correspondence.subject %></p>
+            </div>
+            <div>
+                <p class="text-sm text-gray-600">Priority</p>
+                <p class="font-medium"><%= correspondence.priority %></p>
+            </div>
+            <div>
+                <p class="text-sm text-gray-600">Status</p>
+                <p class="font-medium"><%= correspondence.status %></p>
+            </div>
+            <div>
+                <p class="text-sm text-gray-600">Date Received</p>
+                <p class="font-medium"><%= correspondence.dateReceived ? correspondence.dateReceived.toDateString() : 'N/A' %></p>
+            </div>
+            <div>
+                <p class="text-sm text-gray-600">Registered By</p>
+                <p class="font-medium"><%= correspondence.registeredBy ? correspondence.registeredBy.fullName : 'N/A' %></p>
+            </div>
+            <div>
+                <p class="text-sm text-gray-600">Department</p>
+                <p class="font-medium"><%= correspondence.department ? correspondence.department.name : 'N/A' %></p>
+            </div>
+            <div>
+                <p class="text-sm text-gray-600">Assigned To</p>
+                <p class="font-medium"><%= correspondence.assignedTo ? correspondence.assignedTo.fullName : 'Not Assigned' %></p>
+            </div>
+        </div>
+        
+        <% if (correspondence.sender && correspondence.sender.name) { %>
+        <div class="mt-6">
+            <h3 class="text-lg font-semibold text-gray-800 mb-2">Sender Information</h3>
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <p class="text-sm text-gray-600">Name</p>
+                    <p class="font-medium"><%= correspondence.sender.name %></p>
+                </div>
+                <div>
+                    <p class="text-sm text-gray-600">Organization</p>
+                    <p class="font-medium"><%= correspondence.sender.organization || 'N/A' %></p>
+                </div>
+                <div>
+                    <p class="text-sm text-gray-600">Email</p>
+                    <p class="font-medium"><%= correspondence.sender.email || 'N/A' %></p>
+                </div>
+                <div>
+                    <p class="text-sm text-gray-600">Phone</p>
+                    <p class="font-medium"><%= correspondence.sender.phone || 'N/A' %></p>
+                </div>
+            </div>
+        </div>
+        <% } %>
+        
+        <% if (correspondence.description) { %>
+        <div class="mt-6">
+            <p class="text-sm text-gray-600">Description</p>
+            <p class="mt-1 text-gray-900"><%= correspondence.description %></p>
+        </div>
+        <% } %>
+        
+        <% if (correspondence.attachments && correspondence.attachments.length > 0) { %>
+        <div class="mt-6">
+            <h3 class="text-lg font-semibold text-gray-800 mb-2">Attachments</h3>
+            <div class="space-y-2">
+                <% correspondence.attachments.forEach(att => { %>
+                    <a href="<%= att.path %>" target="_blank" class="flex items-center p-2 bg-gray-50 rounded hover:bg-gray-100">
+                        <i class="fas fa-file mr-2"></i>
+                        <span><%= att.originalName %></span>
+                    </a>
+                <% }) %>
+            </div>
+        </div>
+        <% } %>
+    </div>
+    
+    <div class="bg-white rounded-lg shadow p-6">
+        <h2 class="text-xl font-semibold text-gray-800 mb-4">Tracking History</h2>
+        <div class="space-y-4">
+            <% if (tracking.length > 0) { %>
+                <% tracking.forEach(track => { %>
+                    <div class="border-l-4 border-blue-500 pl-4 pb-4">
+                        <p class="font-medium text-gray-800"><%= track.action.replace('_', ' ').toUpperCase() %></p>
+                        <p class="text-sm text-gray-600"><%= track.remarks %></p>
+                        <p class="text-xs text-gray-500 mt-1">
+                            <% if (track.fromUser) { %>By: <%= track.fromUser.fullName %> | <% } %>
+                            <%= track.createdAt.toLocaleString() %>
+                        </p>
+                    </div>
+                <% }) %>
+            <% } else { %>
+                <p class="text-gray-600">No tracking history</p>
+            <% } %>
+        </div>
+        
+        <div class="mt-6 space-y-2">
+            <% if (user.role === 'admin' || user.role === 'registry_officer') { %>
+                <a href="/correspondence/assign/<%= correspondence._id %>" class="w-full bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 block text-center">
+                    <i class="fas fa-user-plus mr-2"></i> Assign
+                </a>
+            <% } %>
+            <a href="/correspondence/forward/<%= correspondence._id %>" class="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 block text-center">
+                <i class="fas fa-share mr-2"></i> Forward
+            </a>
+            <a href="/incoming" class="w-full bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 block text-center">Back</a>
+        </div>
+    </div>
+</div>
